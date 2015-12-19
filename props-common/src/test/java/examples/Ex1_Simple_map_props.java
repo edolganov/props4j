@@ -37,7 +37,7 @@ public class Ex1_Simple_map_props {
 		String strVal_1 = props.strVal("key1"); //"1"
 		long longVal_1 = props.longVal("key1"); //1L
 		Boolean boolVal_1 = props.boolVal("key1"); //false
-		int defVal=  props.intVal("unknown-key", 42); //no key in props
+		int defVal = props.intVal("unknown-key", 42); //no key in props
 		
 		
 		//print [1, 1, false, 42]
