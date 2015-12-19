@@ -92,6 +92,8 @@ String link2 = props.strVal("link2"); // 127.0.0.1/some2
 - [Example 6: Expressions ${...} in values](https://github.com/edolganov/props4j/blob/master/props-common/src/test/java/examples/Ex6_Expressions_in_vals.java)
 
 
+## Production ready
+Props4j has been successfully used on [Cheapchat.me](http://cheapchat.me) and in open source [live-chat-engine](https://github.com/edolganov/live-chat-engine) project.
 
 
 ## Installation to your project
