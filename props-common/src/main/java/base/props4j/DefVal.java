@@ -4,6 +4,11 @@ import static base.props4j.util.Util.*;
 
 import java.math.BigDecimal;
 
+/**
+ * Default value's holder
+ * 
+ * @author Evgeny Dolganov
+ */
 public class DefVal {
 	
 	public final String defVal;

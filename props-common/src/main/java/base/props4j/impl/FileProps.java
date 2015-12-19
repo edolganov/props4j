@@ -34,7 +34,7 @@ public class FileProps extends BaseProps {
 	private static ScheduledExecutorService syncService;
 	private static synchronized ScheduledExecutorService getExecutorService(){
 		if(syncService == null){
-			syncService = ExecutorsUtil.newScheduledThreadPool("FileProps-sync", 1);
+			syncService = ExecutorsUtil.newScheduledThreadPool("FileProps-sync", 1, true, null);
 		}
 		return syncService;
 	}

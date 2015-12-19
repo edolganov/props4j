@@ -2,12 +2,26 @@ package base.props4j;
 
 import java.math.BigDecimal;
 
+/**
+ * Useful for enum keys 
+ * @author Evgeny Dolganov
+ */
 public interface DefValKey {
 	
-	String name();
+	/**
+	 * Key name for props
+	 */
+	String getName();
 	
+	/**
+	 * Default value for props
+	 */
 	DefVal getDefVal();
 	
+	
+	//
+	//Useful Methods
+	//
 	
 	default String strDef(){
 		return getDefVal().strDef();
@@ -35,27 +49,33 @@ public interface DefValKey {
 	
 	
 	default Integer intFrom(Props props){
-		String key = name();
+		String key = getName();
 		Integer defVal = getDefVal().intDef();
 		return props == null? defVal : props.intVal(key, defVal);
 	}
 	
 	default Long longFrom(Props props){
-		String key = name();
+		String key = getName();
 		Long defVal = getDefVal().longDef();
 		return props == null? defVal : props.longVal(key, defVal);
 	}
 	
 	default String strFrom(Props props){
-		String key = name();
+		String key = getName();
 		String defVal = getDefVal().strDef();
 		return props == null? defVal : props.strVal(key, defVal);
 	}
 	
 	default Boolean boolFrom(Props props){
-		String key = name();
+		String key = getName();
 		Boolean defVal = getDefVal().boolDef();
 		return props == null? defVal : props.boolVal(key, defVal);
+	}
+	
+	default Double doubleFrom(Props props){
+		String key = getName();
+		Double defVal = getDefVal().doubleDef();
+		return props == null? defVal : props.doubleVal(key, defVal);
 	}
 
 }
