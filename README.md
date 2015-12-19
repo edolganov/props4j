@@ -101,16 +101,20 @@ String link2 = props.strVal("link2"); // 127.0.0.1/some2
 ### by Maven
 [via stackoverflow](http://stackoverflow.com/questions/20161602/loading-maven-dependencies-from-github)
 ```xml
-<repository>
-    <id>jitpack.io</id>
-    <url>https://jitpack.io</url>
-</repository>
+<dependencies>
+	<dependency>
+		<groupId>com.github.edolganov</groupId>
+		<artifactId>props4j</artifactId>
+		<version>1.0</version>
+	</dependency>
+</dependencies>
 
-<dependency>
-    <groupId>com.github.edolganov</groupId>
-    <artifactId>props4j</artifactId>
-    <version>1.0</version>
-</dependency>
+<repositories>
+	<repository>
+		<id>jitpack.io</id>
+		<url>https://jitpack.io</url>
+	</repository>
+</repositories>
 ```
 
 ### by Release build
